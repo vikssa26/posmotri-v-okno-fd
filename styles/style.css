@@ -18,6 +18,10 @@ html {
   background-color: #1b1919;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  height: auto;
+  padding: 133px 30px;
 }
 
 h1,
@@ -57,23 +61,15 @@ ol {
   position: relative;
 }
 
-.preloader {
-  position: absolute;/* Прелоадеры должны появляться в двух местах*/
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-}
-
 .content {
   display: flex;
   flex-direction: row;
-  align-content: flex-end;
-  margin-top: 133px;
   gap: 30px;
-  min-height: 1140px;
+  align-items: flex-end;
+  max-width: 1140px;
 }
 
-.search-form__label-text.visually-hidden {
+.visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -92,6 +88,8 @@ ol {
   font-family: 'Fira Sans Condensed';
   font-weight: bold;
   cursor: pointer;
+  min-height: 34px;
+  height: auto;
 }
 
 .button:hover {
@@ -133,12 +131,13 @@ ol {
 .search-form {
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  align-items: flex-start;
   gap: 40px;
 }
 
 .search-form__fieldset {
   border: none;
+  flex: 1;
 }
 
 .search-form__fieldset-title {
@@ -171,10 +170,6 @@ input {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
-}
-
-.search-form__checkbox.visually-hidden {
-  position: absolute;/* чтобы чекбокс не влиял на поток и не занимал место */
 }
 
 .search-form__textfield::placeholder {
@@ -227,9 +222,10 @@ input {
 .content__details {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   gap: 20px;
+  align-self: stretch;
 }
 
 .title {
