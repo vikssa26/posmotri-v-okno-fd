@@ -87,6 +87,7 @@ ol {
   font-weight: bold;
   cursor: pointer;
   min-height: 34px;
+  width: 100%;
   height: auto;
 }
 
@@ -221,8 +222,6 @@ input {
 }
 
 .button.search-form__submit-button {
-  width: 100%;
-  height: 100%;
   max-width: 194px;
   align-self: flex-end;
 }
@@ -230,11 +229,10 @@ input {
 .content__details {
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
-  min-width: auto;
-  flex-basis: auto;
+  min-width: 399px;
   gap: 22px;
   align-self: stretch;
+  flex: 1;
 }
 
 .title {
@@ -342,9 +340,4 @@ input {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-}
-
-.button.more-button {
-  width: 100%;
-  height: 100%;
 }
